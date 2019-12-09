@@ -334,6 +334,24 @@
 	  <property name="y">16</property>
 	</packing>
       </child>
+
+      <child>
+	<widget class="GtkButton" id="button16anouer">
+	  <property name="width_request">264</property>
+	  <property name="height_request">64</property>
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="label" translatable="yes">gestion des reservations</property>
+	  <property name="use_underline">True</property>
+	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
+	  <signal name="clicked" handler="on_button16anouer_clicked" last_modification_time="Mon, 09 Dec 2019 19:41:52 GMT"/>
+	</widget>
+	<packing>
+	  <property name="x">448</property>
+	  <property name="y">136</property>
+	</packing>
+      </child>
     </widget>
   </child>
 </widget>
@@ -1382,6 +1400,31 @@ agent_marketing</property>
 	  <property name="y">280</property>
 	</packing>
       </child>
+    </widget>
+  </child>
+</widget>
+
+<widget class="GtkWindow" id="window10anouer">
+  <property name="width_request">800</property>
+  <property name="height_request">400</property>
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">window1</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_NONE</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+
+  <child>
+    <widget class="GtkFixed" id="fixed12">
+      <property name="visible">True</property>
     </widget>
   </child>
 </widget>

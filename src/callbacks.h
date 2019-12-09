@@ -62,3 +62,7 @@ on_treeview1anouer_row_activated       (GtkTreeView     *treeview,
 void
 on_button15anouer_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
+
+void
+on_button16anouer_clicked              (GtkButton       *button,
+                                        gpointer         user_data);

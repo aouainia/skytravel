@@ -580,8 +580,8 @@ create_window9anouer (void)
   GtkWidget *button14anouer;
   GtkWidget *button15anouer;
   GtkWidget *label17anouer;
-  GtkWidget *combobox2anouer;
   GtkWidget *label16anouer;
+  GtkWidget *combobox2anouer;
 
   window9anouer = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_set_size_request (window9anouer, 800, 400);
@@ -647,6 +647,11 @@ create_window9anouer (void)
   gtk_fixed_put (GTK_FIXED (fixed11), label17anouer, 720, 64);
   gtk_widget_set_size_request (label17anouer, 32, 32);
 
+  label16anouer = gtk_label_new ("");
+  gtk_widget_show (label16anouer);
+  gtk_fixed_put (GTK_FIXED (fixed11), label16anouer, 280, 280);
+  gtk_widget_set_size_request (label16anouer, 464, 40);
+
   combobox2anouer = gtk_combo_box_new_text ();
   gtk_widget_show (combobox2anouer);
   gtk_fixed_put (GTK_FIXED (fixed11), combobox2anouer, 112, 280);
@@ -655,11 +660,6 @@ create_window9anouer (void)
   gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2anouer), _("client"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2anouer), _("agent_clientel"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2anouer), _("agent_marketing"));
-
-  label16anouer = gtk_label_new ("");
-  gtk_widget_show (label16anouer);
-  gtk_fixed_put (GTK_FIXED (fixed11), label16anouer, 280, 280);
-  gtk_widget_set_size_request (label16anouer, 464, 40);
 
   g_signal_connect ((gpointer) button14anouer, "clicked",
                     G_CALLBACK (on_button14anouer_clicked),
@@ -681,8 +681,8 @@ create_window9anouer (void)
   GLADE_HOOKUP_OBJECT (window9anouer, button14anouer, "button14anouer");
   GLADE_HOOKUP_OBJECT (window9anouer, button15anouer, "button15anouer");
   GLADE_HOOKUP_OBJECT (window9anouer, label17anouer, "label17anouer");
-  GLADE_HOOKUP_OBJECT (window9anouer, combobox2anouer, "combobox2anouer");
   GLADE_HOOKUP_OBJECT (window9anouer, label16anouer, "label16anouer");
+  GLADE_HOOKUP_OBJECT (window9anouer, combobox2anouer, "combobox2anouer");
 
   return window9anouer;
 }

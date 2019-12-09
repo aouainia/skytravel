@@ -418,3 +418,11 @@ on_button15anouer_clicked              (GtkWidget       *objet_graphique,
 		
 }
 
+
+void
+on_button16anouer_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+

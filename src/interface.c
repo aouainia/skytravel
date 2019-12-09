@@ -162,6 +162,7 @@ create_window3anouer (void)
   GtkWidget *fixed3;
   GtkWidget *button3anouer;
   GtkWidget *label5anouer;
+  GtkWidget *button16anouer;
 
   window3anouer = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_set_size_request (window3anouer, 800, 400);
@@ -181,8 +182,16 @@ create_window3anouer (void)
   gtk_fixed_put (GTK_FIXED (fixed3), label5anouer, 136, 16);
   gtk_widget_set_size_request (label5anouer, 112, 40);
 
+  button16anouer = gtk_button_new_with_mnemonic (_("gestion des reservations"));
+  gtk_widget_show (button16anouer);
+  gtk_fixed_put (GTK_FIXED (fixed3), button16anouer, 448, 136);
+  gtk_widget_set_size_request (button16anouer, 264, 64);
+
   g_signal_connect ((gpointer) button3anouer, "clicked",
                     G_CALLBACK (on_button3anouer_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button16anouer, "clicked",
+                    G_CALLBACK (on_button16anouer_clicked),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -190,6 +199,7 @@ create_window3anouer (void)
   GLADE_HOOKUP_OBJECT (window3anouer, fixed3, "fixed3");
   GLADE_HOOKUP_OBJECT (window3anouer, button3anouer, "button3anouer");
   GLADE_HOOKUP_OBJECT (window3anouer, label5anouer, "label5anouer");
+  GLADE_HOOKUP_OBJECT (window3anouer, button16anouer, "button16anouer");
 
   return window3anouer;
 }
@@ -685,5 +695,26 @@ create_window9anouer (void)
   GLADE_HOOKUP_OBJECT (window9anouer, combobox2anouer, "combobox2anouer");
 
   return window9anouer;
+}
+
+GtkWidget*
+create_window10anouer (void)
+{
+  GtkWidget *window10anouer;
+  GtkWidget *fixed12;
+
+  window10anouer = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_widget_set_size_request (window10anouer, 800, 400);
+  gtk_window_set_title (GTK_WINDOW (window10anouer), _("window1"));
+
+  fixed12 = gtk_fixed_new ();
+  gtk_widget_show (fixed12);
+  gtk_container_add (GTK_CONTAINER (window10anouer), fixed12);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (window10anouer, window10anouer, "window10anouer");
+  GLADE_HOOKUP_OBJECT (window10anouer, fixed12, "fixed12");
+
+  return window10anouer;
 }
 

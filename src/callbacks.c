@@ -370,11 +370,15 @@ on_treeview1anouer_row_activated       (GtkTreeView     *treeview,
                                         GtkTreeViewColumn *column,
                                         gpointer         user_data)
 {
+GtkWidget *window6anouer;
+exit;
+
 GtkWidget *window9anouer, *m_nom, *m_prenom, *m_mdp ,*m_id;
 	GtkWidget *combobox2anouer;	//combobox2anouer poste
 GtkWidget *output17anouer;	//entry17anouer prenom
 gchar *nom, *prenom, *mdp ,*type,*id;
 window9anouer = create_window9anouer();
+
 	combobox2anouer = lookup_widget(window9anouer, "combobox2anouer") ;
 m_nom=lookup_widget(window9anouer, "entry9anouer");
 m_prenom=lookup_widget(window9anouer, "entry10anouer");
@@ -389,9 +393,14 @@ gtk_entry_set_text(GTK_ENTRY (m_nom),_(nom));
 gtk_entry_set_text(GTK_ENTRY (m_prenom),_(prenom));
 gtk_entry_set_text(GTK_ENTRY (m_mdp),_(mdp));
 	//gtk_combo_box_set_active_text(GTK_COMBO_BOX (combobox2anouer),type);
+
 gtk_label_set_text(GTK_LABEL(output17anouer),_(id));
 
+
 gtk_widget_show(window9anouer);
+
+
+
 }
 
 
@@ -420,9 +429,139 @@ on_button15anouer_clicked              (GtkWidget       *objet_graphique,
 
 
 void
-on_button16anouer_clicked              (GtkButton       *button,
+on_button16anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+
+
+}
+
+
+void
+on_button17anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window12anouer;
+	GtkWidget *window11anouer;
+	window12anouer = lookup_widget(objet_graphique, "window12anouer") ;
+	window11anouer = lookup_widget(objet_graphique, "window11anouer") ;
+	window12anouer = create_window12anouer ();
+	gtk_widget_show (window12anouer);
+	gtk_widget_hide (window11anouer);
+
+}
+
+
+void //valider l'ajoute hotel a partir de catalogue
+on_button18anouer_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
 
 }
+
+void
+on_button19anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window13anouer;
+	GtkWidget *window4anouer;
+	window13anouer = lookup_widget(objet_graphique, "window13anouer") ;
+	window4anouer = lookup_widget(objet_graphique, "window4anouer") ;
+	window13anouer = create_window13anouer ();
+	gtk_widget_show (window13anouer);
+	gtk_widget_hide (window4anouer);
+
+}
+void
+on_button20anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window11anouer;
+	GtkWidget *window13anouer;
+	window11anouer = lookup_widget(objet_graphique, "window11anouer") ;
+	window13anouer = lookup_widget(objet_graphique, "window13anouer") ;
+	window11anouer = create_window11anouer ();
+	gtk_widget_show (window11anouer);
+	gtk_widget_hide (window13anouer);
+
+}
+
+void
+on_button21anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window2anouer;
+	GtkWidget *window6anouer;
+	window2anouer = lookup_widget(objet_graphique, "window2anouer") ;
+	window6anouer = lookup_widget(objet_graphique, "window6anouer") ;
+	window2anouer = create_window2anouer ();
+	gtk_widget_show (window2anouer);
+	gtk_widget_hide (window6anouer);
+
+}
+
+
+void // retour et afficher
+on_button22anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window9anouer;
+	GtkWidget *window6anouer;
+	GtkWidget *treeview1anouer;
+	window9anouer = lookup_widget(objet_graphique, "window9anouer") ;
+	gtk_widget_destroy (window9anouer);
+	window6anouer = lookup_widget(objet_graphique, "window6anouer") ;
+	window6anouer = create_window6anouer ();
+	//gtk_widget_show (window6anouer);
+	treeview1anouer = lookup_widget(window6anouer, "treeview1anouer") ;
+	afficher_personne(treeview1anouer);
+
+}
+
+
+void
+on_button23anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window11anouer;
+	GtkWidget *window12anouer;
+	window11anouer = lookup_widget(objet_graphique, "window11anouer") ;
+	window12anouer = lookup_widget(objet_graphique, "window12anouer") ;
+	window11anouer = create_window11anouer ();
+	gtk_widget_show (window11anouer);
+	gtk_widget_hide (window12anouer);
+
+}
+
+
+void
+on_button24anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window4anouer;
+	GtkWidget *window13anouer;
+	window4anouer = lookup_widget(objet_graphique, "window4anouer") ;
+	window13anouer = lookup_widget(objet_graphique, "window13anouer") ;
+	window4anouer = create_window4anouer ();
+	gtk_widget_show (window4anouer);
+	gtk_widget_hide (window13anouer);
+}
+
+
+
+void
+on_button25anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+	GtkWidget *window13anouer;
+	GtkWidget *window11anouer;
+	window13anouer = lookup_widget(objet_graphique, "window13anouer") ;
+	window11anouer = lookup_widget(objet_graphique, "window11anouer") ;
+	window13anouer = create_window13anouer ();
+	gtk_widget_show (window13anouer);
+	gtk_widget_hide (window11anouer);
+}
+
+
+
 

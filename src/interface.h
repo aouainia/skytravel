@@ -12,3 +12,6 @@ GtkWidget* create_window7anouer (void);
 GtkWidget* create_window8anouer (void);
 GtkWidget* create_window9anouer (void);
 GtkWidget* create_window10anouer (void);
+GtkWidget* create_window11anouer (void);
+GtkWidget* create_window12anouer (void);
+GtkWidget* create_window13anouer (void);

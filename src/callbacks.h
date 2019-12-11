@@ -64,5 +64,42 @@ on_button15anouer_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
 
 void
-on_button16anouer_clicked              (GtkButton       *button,
+on_button16anouer_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
+
+void
+on_button17anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+void
+on_button18anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+void
+on_button19anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+void
+on_button20anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+void
+on_button21anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+void
+on_button22anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+void
+on_button23anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+void
+on_button24anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+
+
+void
+on_button25anouer_clicked              (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
+
+

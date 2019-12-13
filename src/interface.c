@@ -209,9 +209,12 @@ create_window4anouer (void)
 {
   GtkWidget *window4anouer;
   GtkWidget *fixed4;
-  GtkWidget *label6anouer;
   GtkWidget *button4anouer;
+  GtkWidget *button2;
+  GtkWidget *label6anouer;
+  GtkWidget *button3;
   GtkWidget *button19anouer;
+  GtkWidget *buttonarijprestation;
 
   window4anouer = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_set_size_request (window4anouer, 800, 400);
@@ -221,20 +224,35 @@ create_window4anouer (void)
   gtk_widget_show (fixed4);
   gtk_container_add (GTK_CONTAINER (window4anouer), fixed4);
 
-  label6anouer = gtk_label_new (_("label6"));
-  gtk_widget_show (label6anouer);
-  gtk_fixed_put (GTK_FIXED (fixed4), label6anouer, 152, 32);
-  gtk_widget_set_size_request (label6anouer, 104, 40);
-
   button4anouer = gtk_button_new_with_mnemonic (_("retour"));
   gtk_widget_show (button4anouer);
   gtk_fixed_put (GTK_FIXED (fixed4), button4anouer, 40, 144);
   gtk_widget_set_size_request (button4anouer, 66, 29);
 
+  button2 = gtk_button_new_with_mnemonic (_("Gestion "));
+  gtk_widget_show (button2);
+  gtk_fixed_put (GTK_FIXED (fixed4), button2, 192, 192);
+  gtk_widget_set_size_request (button2, 160, 45);
+
+  label6anouer = gtk_label_new (_("bienvenue dans l'espace Clientelle"));
+  gtk_widget_show (label6anouer);
+  gtk_fixed_put (GTK_FIXED (fixed4), label6anouer, 152, 24);
+  gtk_widget_set_size_request (label6anouer, 424, 48);
+
+  button3 = gtk_button_new_with_mnemonic (_("Gestion de reservation"));
+  gtk_widget_show (button3);
+  gtk_fixed_put (GTK_FIXED (fixed4), button3, 192, 112);
+  gtk_widget_set_size_request (button3, 168, 45);
+
   button19anouer = gtk_button_new_with_mnemonic (_("gestion de catalogue"));
   gtk_widget_show (button19anouer);
   gtk_fixed_put (GTK_FIXED (fixed4), button19anouer, 480, 120);
   gtk_widget_set_size_request (button19anouer, 160, 48);
+
+  buttonarijprestation = gtk_button_new_with_mnemonic (_("Gestion de prestation"));
+  gtk_widget_show (buttonarijprestation);
+  gtk_fixed_put (GTK_FIXED (fixed4), buttonarijprestation, 480, 200);
+  gtk_widget_set_size_request (buttonarijprestation, 160, 45);
 
   g_signal_connect ((gpointer) button4anouer, "clicked",
                     G_CALLBACK (on_button4anouer_clicked),
@@ -242,13 +260,19 @@ create_window4anouer (void)
   g_signal_connect ((gpointer) button19anouer, "clicked",
                     G_CALLBACK (on_button19anouer_clicked),
                     NULL);
+  g_signal_connect ((gpointer) buttonarijprestation, "clicked",
+                    G_CALLBACK (on_buttonarijprestation_clicked),
+                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (window4anouer, window4anouer, "window4anouer");
   GLADE_HOOKUP_OBJECT (window4anouer, fixed4, "fixed4");
-  GLADE_HOOKUP_OBJECT (window4anouer, label6anouer, "label6anouer");
   GLADE_HOOKUP_OBJECT (window4anouer, button4anouer, "button4anouer");
+  GLADE_HOOKUP_OBJECT (window4anouer, button2, "button2");
+  GLADE_HOOKUP_OBJECT (window4anouer, label6anouer, "label6anouer");
+  GLADE_HOOKUP_OBJECT (window4anouer, button3, "button3");
   GLADE_HOOKUP_OBJECT (window4anouer, button19anouer, "button19anouer");
+  GLADE_HOOKUP_OBJECT (window4anouer, buttonarijprestation, "buttonarijprestation");
 
   return window4anouer;
 }

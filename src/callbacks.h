@@ -103,3 +103,7 @@ on_button25anouer_clicked              (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
 
 
+
+void
+on_buttonarijprestation_clicked        (GtkButton       *button,
+                                        gpointer         user_data);
